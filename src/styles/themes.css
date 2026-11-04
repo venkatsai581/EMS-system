@@ -1,0 +1,56 @@
+:root {
+  --app-background: #f4f7ff;
+  --card-background: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --app-background: #0f172a;
+  --card-background: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
+  color-scheme: dark;
+}
+html, body, #root { min-height: 100%; }
+body { background: var(--app-background); color: var(--text-primary); }
+.dashboard-layout, .main-area, .page-container { background: var(--app-background); color: var(--text-primary); }
+.header, .sidebar, .stat-card, .recent-section, .employee-toolbar,
+.employee-table-card, .department-card, .department-summary-card,
+.department-toolbar, .leave-stat-card, .leave-toolbar, .leave-table-container,
+.attendance-stat-card, .attendance-percentage-card, .attendance-toolbar,
+.attendance-table-container, .settings-card, .profile-card, .profile-header,
+.confirm-modal, .modal-content, .department-modal { background: var(--card-background); color: var(--text-primary); border-color: var(--border-color); }
+.header { border-bottom-color: var(--border-color); }
+.header-search, .employee-search, .department-toolbar, .leave-search, .attendance-search { background: var(--app-background); border-color: var(--border-color); }
+.header-search input, .employee-search input, .department-toolbar input, .leave-search input, .attendance-search input { color: var(--text-primary); }
+.page-heading h1, .department-page-header h1, .settings-header h1,
+.profile-heading h1, .profile-card h2, .settings-card h2,
+.employee-name strong, .department-card h3, .confirm-modal h2 { color: var(--text-primary); }
+.page-heading p, .department-page-header p, .profile-heading p,
+.profile-detail small, .profile-detail p, .department-description,
+.settings-card p, .settings-header p, .leave-stat-card p { color: var(--text-secondary); }
+table th { background: color-mix(in srgb, var(--app-background) 85%, transparent); color: var(--text-secondary); }
+table td { color: var(--text-primary); border-color: var(--border-color); }
+input, select, textarea { color: var(--text-primary); }
+:root[data-theme="dark"] .form-group input,
+:root[data-theme="dark"] .form-group select,
+:root[data-theme="dark"] .settings-field input,
+:root[data-theme="dark"] .department-modal input,
+:root[data-theme="dark"] .department-modal textarea,
+:root[data-theme="dark"] .employee-toolbar select,
+:root[data-theme="dark"] .attendance-toolbar select,
+:root[data-theme="dark"] .leave-toolbar select {
+  background: #0f172a;
+  color: #f8fafc;
+  border-color: #475569;
+}
+:root[data-theme="dark"] .sidebar-link { color: #cbd5e1; }
+:root[data-theme="dark"] .sidebar-link:hover,
+:root[data-theme="dark"] .sidebar-link.active { background: #312e81; color: #e0e7ff; }
+:root[data-theme="dark"] .department-actions button,
+:root[data-theme="dark"] .action-buttons button,
+:root[data-theme="dark"] .pagination button { background: #334155; color: #e2e8f0; border-color: #475569; }
+:root[data-theme="dark"] .profile-detail { border-color: var(--border-color); }
